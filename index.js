@@ -1,34 +1,24 @@
 /**
-Challenge:
-
-1. Fetch a random image from the Dog API again 
-(https://dog.ceo/api/breeds/image/random)
-
-2. Access the DOM and insert the URL you got from the
-API as an image `src` property (probably easiest if 
-you create the image completely here in the JS and add 
-it as the innerHTML of another element on the DOM)
-*/
-
-fetch('https://dog.ceo/api/breeds/image/random')
-    .then(response => response.json())
-    .then(data => {
-      console.log(data)
-      document.getElementById("image").innerHTML = `<img src="${data.message}"/>`});
-
-/**
 Challenge: 
 
-1. Fetch a random activity from the Bored API
-url: https://apis.scrimba.com/bored/api/activity
-
-2. Display the text of the activity in the browser
+- Make the styling more exciting once an activity idea comes 
+back from the Bored API
+    - Resources: DOM element "classList" property, uigradients.com, 
+      Google Fonts, color.adobe.com
+    - Some ideas:
+      - Change the title from "BoredBot" to something more exciting!
+      - Change the background to something less drab.
+      - Bonus: Animate something on the screen to move around and add more 
+        excitement to the page
 */
 
-fetch("https://apis.scrimba.com/bored/api/activity")
-    .then(Response => Response.json())
-    .then(DataCue => {
-        console.log(DataCue)
-        document.getElementById("text")
-            .textContent = DataCue.activity
+document.getElementById('btn').addEventListener('click', function() {
+    fetch("https://apis.scrimba.com/bored/api/activity")
+        .then(Response => Response.json())
+        .then(DataTransfer => {
+        document.getElementById('title').textContent = "😵UnBoredBot😵";
+        document.getElementById('heading').textContent = "💪🏽UnBoredBot💪🏽";
+        document.getElementById('activity').textContent = DataTransfer.activity;
+        document.body.classList.add('fun');
     })
+})
