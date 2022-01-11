@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/blogspace/index.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogSpace</title>
+</head>
+<body>
+    <nav>
+        <h3>BlogSpace</h3>
+    </nav>
+     <!-- 
+        Challenge:
+        
+        Create a form with 2 inputs (each with an associated label), 
+        one for the post title (a text input) and one for the post body
+        (a textarea element). Then add a button to the form. 
+        
+        Don't worry about styling quite yet.
+     -->
+     <form>
+        <label for="post-title">Title:</label>
+        <input id="post-title" type="text" />
+        <label for="post-body">Body:</label>
+        <textarea id="post-body"></textarea>
+        <button>Post</button>
+     </form>
+     
+    <div id="blog-list"></div>
+    <script src="/blogspace/index.js"></script>
+</body>
+</html>

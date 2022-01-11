@@ -1,0 +1,50 @@
+body {
+    font-family: 'Ubuntu Mono', monospace;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: beige;
+    padding: 5px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+}
+
+nav > h3 {
+    margin: 0;
+}
+
+#blog-list {
+    padding: 10px;
+}
+
+form {
+    padding: 60px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: powderblue;
+}
+
+button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    cursor: pointer;
+  }
+
+  input#post-title, textarea#post-body {
+      margin-bottom: 10px;
+  }
